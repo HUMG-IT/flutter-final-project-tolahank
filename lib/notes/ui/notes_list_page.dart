@@ -117,7 +117,7 @@ class _NotesListPageState extends ConsumerState<NotesListPage> {
                     Expanded(
                       child: DropdownButtonFormField<String>(
                         key: const Key('notesSortDropdown'),
-                        initialValue: state.sortMode,
+                        value: state.sortMode,
                         isExpanded: true,
                         decoration: const InputDecoration(
                           isDense: true,

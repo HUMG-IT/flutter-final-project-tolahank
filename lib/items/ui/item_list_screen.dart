@@ -151,7 +151,7 @@ class _ItemListScreenState extends ConsumerState<ItemListScreen> {
                           width: 200,
                           child: DropdownButtonFormField<String>(
                             key: const Key('statusDropdown'),
-                            initialValue: _statusFilter,
+                            value: _statusFilter,
                             isExpanded: true,
                             decoration: const InputDecoration(
                               isDense: true,
@@ -176,7 +176,7 @@ class _ItemListScreenState extends ConsumerState<ItemListScreen> {
                           width: 200,
                           child: DropdownButtonFormField<String>(
                             key: const Key('categoryDropdown'),
-                            initialValue: _categoryFilter,
+                            value: _categoryFilter,
                             isExpanded: true,
                             decoration: const InputDecoration(
                               isDense: true,
@@ -203,7 +203,7 @@ class _ItemListScreenState extends ConsumerState<ItemListScreen> {
                           width: 200,
                           child: DropdownButtonFormField<String>(
                             key: const Key('sortDropdown'),
-                            initialValue: _sortBy,
+                            value: _sortBy,
                             isExpanded: true,
                             decoration: const InputDecoration(
                               isDense: true,
@@ -941,7 +941,7 @@ class _ItemDialogState extends State<_ItemDialog> {
                 ),
                 const SizedBox(height: 12),
                 DropdownButtonFormField<String>(
-                  initialValue: _category,
+                  value: _category,
                   decoration: const InputDecoration(labelText: 'Loại'),
                   items: const [
                     DropdownMenuItem(value: null, child: Text('Không')),
@@ -953,7 +953,7 @@ class _ItemDialogState extends State<_ItemDialog> {
                 ),
                 const SizedBox(height: 12),
                 DropdownButtonFormField<int>(
-                  initialValue: _priority,
+                  value: _priority,
                   decoration: const InputDecoration(labelText: 'Độ gấp'),
                   items: const [
                     DropdownMenuItem(value: 0, child: Text('Không gấp')),
