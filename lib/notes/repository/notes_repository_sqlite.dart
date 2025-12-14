@@ -52,6 +52,13 @@ class NotesRepositorySqlite implements NotesRepository {
         int.tryParse(note.id) ?? note.id,
       ]);
       stmt.dispose();
+      
+      // Load lại note từ database để có updated_at mới
+      final rows = _db.select('SELECT id, title, content, tag, created_at, updated_at, is_done FROM notes WHERE id = ?', [int.tryParse(note.id) ?? note.id]);
+      if (rows.isNotEmpty) {
+        final updated = _fromRow(rows.first);
+        return Result.success(updated);
+      }
       return Result.success(note);
     } catch (e) {
       return Result.failure('Không thể cập nhật ghi chú');

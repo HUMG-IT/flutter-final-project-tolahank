@@ -726,6 +726,7 @@ class _ItemListScreenState extends ConsumerState<ItemListScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'items_fab',
         child: const Icon(Icons.add),
         onPressed: () async {
           final created = await showDialog<Item?>(

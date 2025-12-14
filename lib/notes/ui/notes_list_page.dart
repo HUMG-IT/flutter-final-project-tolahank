@@ -486,6 +486,7 @@ class _NotesListPageState extends ConsumerState<NotesListPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'notes_fab',
         child: const Icon(Icons.add),
         onPressed: () {
           Navigator.push(
